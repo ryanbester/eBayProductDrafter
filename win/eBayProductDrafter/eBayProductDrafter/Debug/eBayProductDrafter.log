@@ -1,6 +1,0 @@
-﻿  main.cpp
-g:\computing\programming\projects\ebay product drafter\win\ebayproductdrafter\ebayproductdrafter\resource.h(3): warning C4005: 'CREATEPROCESS_MANIFEST_RESOURCE_ID': macro redefinition
-  d:\program files (x86)\windows kits\10\include\10.0.17134.0\um\winuser.h(261): note: see previous definition of 'CREATEPROCESS_MANIFEST_RESOURCE_ID'
-resource.h(3): warning RC4005: 'CREATEPROCESS_MANIFEST_RESOURCE_ID' : redefinition
-  
-  eBayProductDrafter.vcxproj -> G:\Computing\Programming\Projects\eBay Product Drafter\win\eBayProductDrafter\Debug\eBayProductDrafter.exe
