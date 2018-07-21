@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+    <meta name="theme-color" content="rgb(0, 80, 157)" />
+    <link rel="icon" href="../../img/favicon48x48.png" type="image/png" sizes="48x48">
+    <meta name="viewport" content="width=device-width">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" type="text/css" href="../../style.css" />
+    <title>Creating a Record - eBay Product Drafter Help</title>
+    <meta name="author" content="Ryan Bester" />
+    <meta name="description" content="Draft Products" />
+    <meta name="keywords" content="ebay, product, drafter, draft" />
+    <meta name="og:title" content="eBay Product Drafter" />
+    <meta name="og:type" content="website" />
+    <meta name="og:image" content="../../img/favicon48x48.png" />
+    <meta name="og:url" content="https://ryanbester.github.io/eBayProductDrafter" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+</head>
+
+<body onload="onLoad()">
+    <h1>eBay Product Drafter</h1>
+    <ul id="nav">
+        <li>
+            <a href="../../">Home</a>
+        </li>
+        <li>
+            <a href="../../about">About</a>
+        </li>
+        <li>
+            <a href="https://github.com/ryanbester/eBayProductDrafter/releases">Download</a>
+        </li>
+        <li>
+            <a href="../../help" class="navActive">Help</a>
+        </li>
+    </ul>
+    <div id="mainContainer">
+        <p style="display: inline;">
+            <a href="../">Help</a> > Creating a new record</p>
+        <h1>Creating a new record</h1>
+        <div class="imgContainer" style="overflow: hidden;">
+            <div style="width: 100%; height: 85px;">
+                <a href="img/img1.png" title="Create a Record">
+                    <img alt="Create a Record" src="img/img1.png" style="width: 100%; max-width: 456px; height: auto; padding-top: 5px;" />
+                </a>
+            </div>
+        </div>
+        <ol>
+            <li>Open eBay Product Drafter</li>
+            <li>Click the New button on the toolbar, or select File and then New</li>
+            <li>Enter a title for the product</li>
+            <li>Select a condition for the product</li>
+            <li>Describe the condition for the product</li>
+            <li>Describe the product</li>
+        </ol>
+        <div class="imgContainer">
+            <a href="img/img2.png" title="Create Record Form">
+                <img alt="Create Record Form" src="img/img2.png" style="width: 100%; max-width: 456px; height: auto; padding-top: 5px;" />
+            </a>
+        </div>
+        <ol start="7">
+            <li>Click the Check SKU button</li>
+            <li>Enter an SKU into the box</li>
+            <li>Click Search</li>
+            <li>If the SKU already exists, the exisiting SKU will be highlighted. If the SKU does not exist, click the OK button</li>
+        </ol>
+        <div class="imgContainer">
+            <a href="../../img/checkSKU.png" title="Check SKU Dialog">
+                <img alt="Check SKU Dialog" src="../../img/checkSKU.png" style="width: 100%; max-width: 286px; height: auto; padding-top: 5px;"
+                />
+            </a>
+        </div>
+        <ol start="11">
+            <li>Enter a price for the product</li>
+            <li>Click the Save button on the toolbar or select File and then Save</li>
+            <li>If the record saves succcessfully, a dialog will appear asking you to select an option. Select Create a New Record
+                to repeat this process, Edit an Existing Record to edit a record which already exists, or Exit</li>
+        </ol>
+        <div class="imgContainer">
+            <a href="img/img3.png" title="Verification Message">
+                <img alt="Verification Message" src="img/img3.png" style="width: 100%; max-width: 402px; height: auto; padding-top: 5px;"
+                />
+            </a>
+        </div>
+        <h2>Errors</h2>
+        <h3>Enter an SKU</h3>
+        <div class="imgContainer">
+            <a href="img/error1.png" title="Enter an SKU Error">
+                <img alt="Enter an SKU Error" src="img/error1.png" style="width: 100%; max-width: 186px; height: auto; padding-top: 5px;"
+                />
+            </a>
+        </div>
+        <p>This error will occur when an SKU has not been entered into the SKU field.</p>
+        <p>To fix this error:</p>
+        <ul>
+            <li>Check that the SKU field contains a number</li>
+            <li>Make sure that there are no spaces or invisible characters in the SKU field.
+                <i>To check this, right click inside the SKU field and select Show Unicode control characters.</i>
+            </li>
+        </ul>
+        <h3>File already exists</h3>
+        <div class="imgContainer">
+            <a href="img/error2.png" title="File already exists Error">
+                <img alt="File already exists Error" src="img/error2.png" style="width: 100%; max-width: 209px; height: auto; padding-top: 5px;"
+                />
+            </a>
+        </div>
+        <p>This error occurs when the SKU entered into the SKU field has already been used.</p>
+        <p>To fix this error:</p>
+        <ul>
+            <li>Use the Check SKU feature to choose an SKU which has not already been used.</li>
+        </ul>
+    </div>
+    <div id="footer" style="text-align: right;">
+        <p id="copyright-text">&copy; 2017 Ryan Bester</p>
+    </div>
+    <script>
+        function onLoad() {
+            var currentYear = new Date().getFullYear();
+            document.getElementById("copyright-text").innerHTML = "&copy; 2017&ndash;" + currentYear + " Ryan Bester";
+        }
+    </script>
+</body>
+
+</html>
