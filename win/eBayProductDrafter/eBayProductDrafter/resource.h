@@ -6,7 +6,11 @@
 
 const TCHAR szAppName[] = TEXT("eBayProductDrafter");
 
+bool isCreatingProduct = false;
+
 HWND hToolbar, hStatusbar;
+
+HWND hFormTitle, hFormCon, hFormConDes, hFormDes, hFormSKU, hFormChkSKU, hFormPrice, hFormCurrency, hFormTitleLbl, hFormConLbl, hFormConDesLbl, hFormDesLbl, hFormSKULbl, hFormPriceLbl;
 
 HMENU hMenu, hSubMenu;
 

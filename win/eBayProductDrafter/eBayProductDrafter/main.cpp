@@ -1,4 +1,9 @@
+#ifndef _WINDOWS_
+
 #include <Windows.h>
+
+#endif
+
 #include <CommCtrl.h>
 #include <strsafe.h>
 #include <Shlwapi.h>
@@ -93,6 +98,17 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam) {
 		CreateToolbar(hWnd);
 		CreateStatusbar(hWnd);
 		EnumChildWindows(hWnd, (WNDENUMPROC)SetFont, (LPARAM)GetStockObject(DEFAULT_GUI_FONT));
+		break;
+	}
+	case WM_COMMAND:
+	{
+		switch (LOWORD(wParam)) {
+		case IDM_FILE_NEW:
+		{
+			CreateProductForm(hWnd, NULL, NULL, NULL, NULL, NULL, NULL, TEXT("GBP"));
+			break;
+		}
+		}
 		break;
 	}
 	default:
