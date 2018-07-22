@@ -11,6 +11,9 @@
 #include <vector>
 #include <stdio.h>
 #include "resource.h"
+#include "main.h"
+#include "form.h"
+#include "record.h"
 
 using namespace std;
 
@@ -89,7 +92,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam) {
 		CreateApplicationMenu(hWnd);
 		CreateToolbar(hWnd);
 		CreateStatusbar(hWnd);
-		HWND hButton;
 		EnumChildWindows(hWnd, (WNDENUMPROC)SetFont, (LPARAM)GetStockObject(DEFAULT_GUI_FONT));
 		break;
 	}

@@ -4,8 +4,6 @@
 
 #define RESOURCE_H
 
-#include "main.h"
-
 const TCHAR szAppName[] = TEXT("eBayProductDrafter");
 
 HWND hToolbar, hStatusbar;

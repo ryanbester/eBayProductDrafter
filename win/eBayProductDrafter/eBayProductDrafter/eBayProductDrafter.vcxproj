@@ -19,10 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="form.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="record.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="form.h" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="record.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
