@@ -6,11 +6,16 @@
 
 const TCHAR szAppName[] = TEXT("eBayProductDrafter");
 
+extern char pszFileName[1024];
+extern char programData[1024];
+
 extern bool isCreatingProduct;
 
 extern HWND hToolbar, hStatusbar;
 
 extern HWND hFormTitle, hFormCon, hFormConDes, hFormDes, hFormSKU, hFormChkSKU, hFormPrice, hFormCurrency, hFormTitleLbl, hFormConLbl, hFormConDesLbl, hFormDesLbl, hFormSKULbl, hFormPriceLbl;
+
+extern HWND hChkSKUText, hChkSKUSearchBtn, hChkSKUList, hChkSKULbl;
 
 extern HMENU hMenu, hSubMenu;
 
@@ -51,5 +56,10 @@ extern HMENU hMenu, hSubMenu;
 #define IDC_FORM_SKU_BTN 1006
 #define IDC_FORM_PRICE_TXT 1007
 #define IDC_FORM_PRICE_COMBO 1008
+
+#define IDC_CHK_SKU_SEARCH 1301
+#define IDC_CHK_SKU_TEXT 1302
+
+#define IDD_CHECK_SKU 101
 
 #endif

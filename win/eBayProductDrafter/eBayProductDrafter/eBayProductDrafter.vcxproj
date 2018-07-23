@@ -19,11 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ChkSKUDlg.cpp" />
     <ClCompile Include="form.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="record.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ChkSKUDlg.h" />
     <ClInclude Include="form.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="record.h" />
@@ -146,6 +148,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
+      <AdditionalDependencies>comctl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

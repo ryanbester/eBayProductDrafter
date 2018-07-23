@@ -20,7 +20,12 @@
 #include "form.h"
 #include "record.h"
 
+#include "ChkSKUDlg.h"
+
 using namespace std;
+
+char pszFileName[1024] = { 0 };
+char programData[1024] = { 0 };
 
 LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
 
@@ -124,6 +129,39 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam) {
 		case IDM_FILE_NEW:
 		{
 			CreateProductForm(hWnd, NULL, NULL, NULL, NULL, NULL, NULL, TEXT("GBP"));
+			break;
+		}
+		case IDC_FORM_TITLE_TXT:
+		{
+			switch (HIWORD(wParam)) {
+			case EN_CHANGE:
+			{
+				TCHAR buff[1024];
+				GetWindowText(hFormTitle, buff, 1024);
+				if (buff != TEXT("")) {
+					StringCchCat(buff, 1024, TEXT(" - eBay Product Drafter"));
+					SetWindowText(hWnd, buff);
+				}
+				else {
+					SetWindowText(hWnd, TEXT("New Record - eBay Product Drafter"));
+				}
+				break;
+			}
+			}
+			break;
+		}
+		case IDC_FORM_SKU_BTN:
+		{
+			int chkSKUDlg = DialogBox(GetModuleHandle(NULL), MAKEINTRESOURCE(IDD_CHECK_SKU), hWnd, CheckSKUDlgProc);
+			if (chkSKUDlg == IDOK) {
+
+			}
+			else if (chkSKUDlg == IDCANCEL) {
+
+			}
+			else if (chkSKUDlg == -1) {
+				MessageBox(hWnd, TEXT("Dialog failed"), TEXT("Error"), MB_OK | MB_ICONERROR);
+			}
 			break;
 		}
 		}

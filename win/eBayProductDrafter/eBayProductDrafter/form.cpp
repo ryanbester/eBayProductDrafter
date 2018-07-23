@@ -16,7 +16,7 @@ const TCHAR *currencies[] = { TEXT("GBP"), TEXT("USD"), TEXT("EUR") };
 
 HWND hFormTitle, hFormCon, hFormConDes, hFormDes, hFormSKU, hFormChkSKU, hFormPrice, hFormCurrency, hFormTitleLbl, hFormConLbl, hFormConDesLbl, hFormDesLbl, hFormSKULbl, hFormPriceLbl;
 
-bool CreateProductForm(HWND hWnd, LPCTSTR title, LPCTSTR con, LPCTSTR conDes, LPCTSTR des, LPCTSTR SKU, LPCTSTR price, LPCTSTR currency)
+bool CreateProductForm(HWND hWnd, LPCTSTR title, LPCTSTR con, LPCTSTR conDes, LPCTSTR des, LPTSTR SKU, LPCTSTR price, LPCTSTR currency)
 {
 	SetWindowText(hWnd, TEXT("New Record - eBay Product Drafter"));
 
