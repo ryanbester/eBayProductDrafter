@@ -10,6 +10,6 @@
 
 #endif
 
-bool CreateProductForm(HWND hWnd, LPCTSTR title, LPCTSTR con, LPCTSTR conDes, LPCTSTR des, PSTR SKU, LPCTSTR price, LPCTSTR currency);
+bool CreateProductForm(HWND hWnd, LPCTSTR title, LPCTSTR con, LPCTSTR conDes, LPCTSTR des, LPCTSTR SKU, LPCTSTR price, LPCTSTR currency);
 
 #endif

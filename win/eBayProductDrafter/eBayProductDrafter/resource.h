@@ -6,13 +6,13 @@
 
 const TCHAR szAppName[] = TEXT("eBayProductDrafter");
 
-bool isCreatingProduct = false;
+extern bool isCreatingProduct;
 
-HWND hToolbar, hStatusbar;
+extern HWND hToolbar, hStatusbar;
 
-HWND hFormTitle, hFormCon, hFormConDes, hFormDes, hFormSKU, hFormChkSKU, hFormPrice, hFormCurrency, hFormTitleLbl, hFormConLbl, hFormConDesLbl, hFormDesLbl, hFormSKULbl, hFormPriceLbl;
+extern HWND hFormTitle, hFormCon, hFormConDes, hFormDes, hFormSKU, hFormChkSKU, hFormPrice, hFormCurrency, hFormTitleLbl, hFormConLbl, hFormConDesLbl, hFormDesLbl, hFormSKULbl, hFormPriceLbl;
 
-HMENU hMenu, hSubMenu;
+extern HMENU hMenu, hSubMenu;
 
 #define CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "eBayProductDrafter.exe.manifest"
 
@@ -42,5 +42,14 @@ HMENU hMenu, hSubMenu;
 
 #define IDC_MAIN_TOOL 8001
 #define IDC_MAIN_STATUS 8002
+
+#define IDC_FORM_TITLE_TXT 1001
+#define IDC_FORM_CON_COMBO 1002
+#define IDC_FORM_CON_DES_TXT 1003
+#define IDC_FORM_DES_TXT 1004
+#define IDC_FORM_SKU_TXT 1005
+#define IDC_FORM_SKU_BTN 1006
+#define IDC_FORM_PRICE_TXT 1007
+#define IDC_FORM_PRICE_COMBO 1008
 
 #endif

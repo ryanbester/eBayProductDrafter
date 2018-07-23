@@ -100,6 +100,24 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam) {
 		EnumChildWindows(hWnd, (WNDENUMPROC)SetFont, (LPARAM)GetStockObject(DEFAULT_GUI_FONT));
 		break;
 	}
+	case WM_CTLCOLORBTN:
+	{
+		COLORREF colorref;
+		colorref = RGB(255, 255, 255);
+		HBRUSH hBrushBtn;
+		hBrushBtn = CreateSolidBrush(colorref);
+		return ((LRESULT)hBrushBtn);
+		break;
+	}
+	case WM_CTLCOLORSTATIC:
+	{
+		COLORREF colorref;
+		colorref = RGB(255, 255, 255);
+		HBRUSH hBrushBtn;
+		hBrushBtn = CreateSolidBrush(colorref);
+		return ((LRESULT)hBrushBtn);
+		break;
+	}
 	case WM_COMMAND:
 	{
 		switch (LOWORD(wParam)) {
